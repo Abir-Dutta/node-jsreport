@@ -1,0 +1,19 @@
+{
+    "name": "htmlRender",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo  exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.16.4",
+        "jsreport": "^2.4.0",
+        "jsreport-client": "^1.0.2",
+        "phantom": "^6.2.0",
+        "phantom-html2pdf": "^4.0.1"
+    }
+}

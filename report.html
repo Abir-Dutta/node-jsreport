@@ -1,0 +1,338 @@
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> JSReport</title> 
+        <link rel="stylesheet" href="http://localhost:3000/lib/bootstrap/dist/css/bootstrap.css" /> 
+        <script src="http://localhost:3000/js/Chart.bundle.min.js"></script>
+        <style>
+            @media print{@page {size: landscape}}
+            body{
+                font-size: 9px;
+                background-color: #ecf5f5;
+                margin: 0 auto;
+            }
+            label{
+                font-weight: bold;
+                font-size: 7px;
+                text-transform: capitalize;
+            }
+            .font12{
+                font-size: 12px;
+            }
+            .with-background{
+                background-color:white;
+                padding: 5px;
+                margin-left:10px;
+                margin-bottom:5px;
+            }
+           
+             .breakdown{
+                font-size: 18px;
+            }
+            .breakdown label{
+                font-weight: bold;
+                font-size: 10px;
+            }
+            .input80{
+               width:80%
+            }
+            .project-title{
+                color:#5fa626;
+            }
+            .all-green{
+                color:white;
+                background-color: #5fa626;
+            }
+            .flexbox{
+                display:flex;
+                flex-direction: row nowrap;
+                justify-content:  space-between;
+            }
+            .end-slider-value{
+                position: relative;
+    left: 110px;
+    bottom: 12px;
+            }
+        </style>
+</head>
+
+<body> 
+<!-- -->
+
+
+<!-- <div style='page-break-before: always;'></div> -->
+
+<div class="row col-12">
+    <div class="col-6">
+        <h5 class="project-title">Test Project Report</h5>
+    <div class="row col-12 with-background">
+            <div class="row col-12"> 
+        <div class="col-2">
+            <label>PROJECT</label>
+        </div>
+        <div class="col-2">
+                <label>REGION</label>
+        </div>
+        <div class="col-2"> 
+            <label>CITY</label>
+        </div>
+        <div class="col-2"> 
+            <label>COUNTRY</label>
+        </div>
+        <div class="col-2"> 
+            <label>TOTAL AREA</label>
+        </div>
+        <div class="col-2 all-green"> 
+                <label>PROJECT SIZE</label>
+            </div>
+        </div>
+        <div class="row col-12"> 
+                <div class="col-2">
+                    <div><span>Test Project</span></div>
+                </div>
+                <div class="col-2">
+                        <div><span>EMEA</span></div>
+                </div>
+                <div class="col-2"> 
+                    <div><span>Paris</span></div>
+                </div>
+                <div class="col-2"> 
+                    <div><span>France</span></div>
+                </div>
+                <div class="col-2"> 
+                    <div><span>1,000 Sq M</span></div>
+                </div>
+                <div class="col-2 all-green"> 
+                        <div><span>26,000 RSF</span></div>
+                    </div>
+                </div>
+        </div>
+        <div class="col-12 class">
+            <div><Label>Project Description: </Label><span></span> Fit-Out 50k office for client </div>
+        </div>
+        <div class="row col-12">
+           <div class="col-6"> <label>BUDGET BREAKDOWN</label></div>
+           <div class="col-6"> <label>BENCHMARKING</label></div>
+        </div>
+        <div class="row col-12 with-background breakdown">
+            <div class="row col-12 flexbox">
+                    <div class="col-3" >
+                            <label>Workspace</label>
+                        </div>
+                        <div class="col-3" >
+                                <label>Collaborative Space</label>
+
+                        </div>
+                        <div  class="col-3" > 
+                            <label>Common Areas</label>
+
+                        </div>
+                        <div  class="col-3"  > 
+                            <label>UnAllocated Space</label>
+
+                        </div>
+            </div>   
+            <div class="row col-12 flexbox">
+                    <div class="col-3" >
+                            <div><span>55%</span></div>
+                        </div>
+                        <div class="col-3" >
+                        <div><span>24%</span></div>
+
+                        </div>
+                        <div  class="col-3" > 
+                    <div><span>24%</span></div>
+
+                        </div>
+                        <div  class="col-3"  > 
+                    <div><span>0%</span></div>
+
+                        </div>
+            </div> 
+             
+    </div>
+    <div class="row col-12 with-background breakdown">
+            <div class="row col-12 flexbox">
+            <div class="col-4" >
+                <label>Seat Count</label>
+                <div><input value="400" disabled class="input80"/></div>
+
+            </div>
+            <div  class="col-4" >
+                    <label>Workstation Count</label>
+                    <div><input value="380" disabled class="input80"/></div>
+
+            </div>
+            <div  class="col-4" > 
+                <label>Office Count</label>
+                <div><input value="20" disabled class="input80"/></div>
+
+            </div> 
+        </div> 
+       
+</div>
+<div class="row col-12" >
+        <div class="row col-6  with-background">
+            <div class="row col-12" style="margin-top: 20px">
+                <div class="col-12 font12" > Headcount</div>
+                <div class="row col-12"> 
+                        <div class="col-9"> 
+                                <div class="">
+                                          <input class="border-0" type="range" min="0" max="5000" />
+                                          <div  >0</div>
+                                          <div  class="end-slider-value">5000</div>
+                                      </div> 
+                                      </div>
+                            <div class="col-3"   style="padding: 5px 0;    font-size: 14px;    position: relative; left: 30;"> 
+                                <input type="text" value="500" style="width: 70%" >
+                                </div>
+                </div>
+               
+
+            </div>
+            <div class="row col-12" style="margin-top: 20px">
+                    <div class="col-12 font12" > Circulation Factor</div>
+                    <div class="row col-12"> 
+                            <div class="col-9"> 
+                                    <div class="">
+                                              <input class="border-0" type="range" min="0" max="30" />
+                                              <div  >0%</div>
+                                              <div  class="end-slider-value">50%</div>
+                                          </div> 
+                                          </div>
+                                <div class="col-3"   style="padding: 5px 0;    font-size: 14px;    position: relative; left:30;"> 
+                                    <input type="text" value="32%" style="width: 70%" >
+                                    </div>
+                    </div>
+                   
+    
+                </div>
+                <div class="row col-12" style="margin-top: 20px">
+                        <div class="col-12 font12" > Lost Factor (Common Area Factor)</div>
+                        <div class="row col-12"> 
+                                <div class="col-9"> 
+                                        <div class="">
+                                                  <input class="border-0" type="range" min="0" max="40" />
+                                                  <div  >0%</div>
+                                                  <div  class="end-slider-value">40%</div>
+                                              </div> 
+                                              </div>
+                                    <div class="col-3"   style="padding: 5px 0;    font-size: 14px;    position: relative; left:30;"> 
+                                        <input type="text" value="20%" style="width: 70%" >
+                                        </div>
+                        </div>
+                       
+        
+                    </div>
+        </div>
+        <div class="row col-6  with-background" >
+                <div class="row col-12" style="margin-top: 20px">
+                        <div class="col-12 font12" > Office vs Workstation</div>
+                        <div class="row col-12"> 
+                                <div class="col-9"> 
+                                        <div class="">
+                                                  <input class="border-0" type="range" min="0" max="30" />
+                                                  <div  >0%</div>
+                                                  <div  class="end-slider-value">30%</div>
+                                              </div> 
+                                              </div>
+                                    <div class="col-3"   style="padding: 5px 0;    font-size: 14px;    position: relative; left:30;"> 
+                                        <input type="text" value="5%" style="width: 70%" >
+                                        </div>
+                        </div>
+                       
+        
+                    </div>
+                    <div class="row col-12" style="margin-top: 20px">
+                            <div class="col-12 font12" > Circulation Factor</div>
+                            <div class="row col-12"> 
+                                    <div class="col-9"> 
+                                            <div class="">
+                                                      <input class="border-0" type="range" min="0" max="30" />
+                                                      <div  >0%</div>
+                                                      <div  class="end-slider-value">50%</div>
+                                                  </div> 
+                                                  </div>
+                                        <div class="col-3"   style="padding: 5px 0;    font-size: 14px;    position: relative; left:30;"> 
+                                            <input type="text" value="32%" style="width: 70%" >
+                                            </div>
+                            </div>
+                           
+            
+                        </div>
+                        <div class="row col-12" style="margin-top: 20px">
+                                <div class="col-12 font12" > Lost Factor (Common Area Factor)</div>
+                                <div class="row col-12"> 
+                                        <div class="col-9"> 
+                                                <div class="">
+                                                          <input class="border-0" type="range" min="0" max="40" />
+                                                          <div  >0%</div>
+                                                          <div  class="end-slider-value">40%</div>
+                                                      </div> 
+                                                      </div>
+                                            <div class="col-3"   style="padding: 5px 0;    font-size: 14px;    position: relative; left:30;"> 
+                                                <input type="text" value="20%" style="width: 70%" >
+                                                </div>
+                                </div>
+                               
+                
+                            </div>
+        </div>
+</div>
+</div>
+    
+    <div class="col-6">
+            <canvas id="myChart" width="400" height="400"></canvas> 
+    </div>
+</div>
+
+<script>
+
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            datasets: [{
+                label: '# of Votes',
+                data: [12, 19, 3, 5, 2, 3],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }, animation: {
+                duration: 0,
+                onComplete: function () {
+                    window.JSREPORT_READY_TO_START = true
+                    
+                }
+            },responsive: false
+        }
+    }); 
+</script>
+</body>
+</html>
